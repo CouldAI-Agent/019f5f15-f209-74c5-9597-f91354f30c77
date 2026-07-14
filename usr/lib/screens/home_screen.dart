@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'sensitivity_screen.dart';
-import 'control_screen.dart';
-import 'display_tips_screen.dart';
+import 'controls_screen.dart';
+import 'display_screen.dart';
+import 'headshot_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -42,7 +43,7 @@ class HomeScreen extends StatelessWidget {
                   color: Colors.greenAccent,
                   onTap: () => Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const ControlScreen()),
+                    MaterialPageRoute(builder: (context) => const ControlsScreen()),
                   ),
                 ),
                 _buildMenuCard(
@@ -53,7 +54,18 @@ class HomeScreen extends StatelessWidget {
                   color: Colors.orangeAccent,
                   onTap: () => Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const DisplayTipsScreen()),
+                    MaterialPageRoute(builder: (context) => const DisplayScreen()),
+                  ),
+                ),
+                _buildMenuCard(
+                  context,
+                  title: 'Headshot Sensitivity',
+                  subtitle: 'Highest Accuracy Settings',
+                  icon: Icons.my_location,
+                  color: Colors.redAccent,
+                  onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const HeadshotScreen()),
                   ),
                 ),
               ],
